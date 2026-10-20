@@ -25,20 +25,26 @@ It is **not** meant for high-performance production use. Each operation is a sma
 ## Installation
 
 ```bash
+pip install lee-groups
+```
+
+or the latest version straight from GitHub:
+
+```bash
 pip install git+https://github.com/Vulcan758/Lee.git
 ```
 
 To also install what the examples notebook needs (scipy, matplotlib, jupyter):
 
 ```bash
-pip install "lee[examples] @ git+https://github.com/Vulcan758/Lee.git"
+pip install "lee-groups[examples]"
 ```
 
-The package is called `lee`, and the module you import is `Lee`:
+The package is called `lee-groups` on PyPI, and the module you import is `lee`:
 
 ```python
 import numpy as np
-from Lee import SO_n, so_n, se3, SE3, se2, SE2
+from lee import SO_n, so_n, se3, SE3, se2, SE2
 ```
 
 ## Conventions
@@ -156,3 +162,7 @@ def between_factor(Xi, Xj, Z):
 
 - **Exp/Log and the Jacobians are implemented for SO(2), SO(3), SE(2) and SE(3).** `to_hat`/`to_vee` and `SO_n` accept higher dimensions, but the closed-form maps are only valid in 2-D and 3-D.
 - **Speed:** pure Python and numpy, one pose at a time (see "What it's for").
+
+## License
+
+MIT. See [LICENSE](LICENSE).
