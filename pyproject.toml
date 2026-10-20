@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lee"
+version = "0.1.0"
+description = "A small Lie group library for SO(2), SO(3), SE(2) and SE(3), written for pose graph optimization"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+authors = [{ name = "Vulcan758" }]
+keywords = ["lie groups", "SE(3)", "SE(2)", "SO(3)", "SLAM", "pose graph optimization", "robotics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+examples = ["scipy", "matplotlib", "jupyter"]
+
+[project.urls]
+Homepage = "https://github.com/Vulcan758/Lee"
+"Used in" = "https://github.com/Vulcan758/Pose-Graph-Optimization-Learning"
+
+[tool.setuptools]
+py-modules = ["Lee"]
